@@ -1,0 +1,29 @@
+1.1
+ Project Title
+The title of this project is “Smart Glasses for Real Time Foreign Language Reading/ Trans-
+lation”
+1.2
+ Proposal Statement
+This project proposes the design and development of smart glasses capable of capturing printed
+and digital text in foreign languages and translating it into a user-selected language in real
+time. The system will integrate a lightweight camera mounted on wearable glasses to acquire
+textual information from books, instruction manuals, labels, and technical documents. The
+captured text will be processed using Optical Character Recognition (OCR) to convert it into
+machine-readable format, followed by AI-based translation algorithms to generate the trans-
+lated content. The translated output will then be delivered audibly through built-in speakers
+or earphones, enabling hands-free real-time reading and comprehension. A functional proto-
+type will be developed and demonstrated under laboratory conditions to validate real-time text
+capture, translation accuracy, and audio output performance.
+1.3
+ Scope of Project
+The scope of this project includes the design, implementation, and testing of a proof-of-concept
+smart glasses system for real-time foreign language reading and translation. The project shall
+involve integration of a camera module with a wearable glasses frame, development of OCR
+algorithms for accurate text extraction, and implementation of AI-based translation models
+supporting multiple languages. An audio output subsystem shall be incorporated to deliver
+translated content to the user in real time.
+The system will be evaluated using printed and digital text samples under controlled light-
+ing and laboratory environments to assess translation accuracy, processing latency, and audio
+clarity. The scope of this project is limited to a laboratory-demonstrated prototype and does
+not include large-scale deployment, commercial product design, or optimization for extreme
+environmental conditions.

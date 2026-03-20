@@ -1,0 +1,158 @@
+import cv2
+import pytesseract
+import numpy as np
+from symspellpy.symspellpy import SymSpell, Verbosity
+from difflib import get_close_matches
+import pkg_resources
+import os
+
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+# Load once at the top
+tokenizer = AutoTokenizer.from_pretrained("vennify/t5-base-grammar-correction")
+model = AutoModelForSeq2SeqLM.from_pretrained("vennify/t5-base-grammar-correction")
+
+def correct_text_t5(text):
+    input_ids = tokenizer.encode("grammar: " + text, return_tensors="pt", max_length=512, truncation=True)
+    outputs = model.generate(input_ids, max_length=512, num_beams=4, early_stopping=True)
+    return tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+
+# ------------------------------------------------
+# LOAD IMAGE
+# ------------------------------------------------
+image = cv2.imread("testimg2.jpg")
+
+if image is None:
+    raise ValueError("Image not found. Check file path.")
+
+# ------------------------------------------------
+# MINIMAL PREPROCESSING (REAL-TIME SAFE)
+# ------------------------------------------------
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+gray = cv2.resize(
+    gray,
+    None,
+    fx=1.5,
+    fy=1.5,
+    interpolation=cv2.INTER_CUBIC
+)
+
+# 2️⃣ pic(1) CLAHE – local contrast enhancement
+clahe = cv2.createCLAHE(
+    clipLimit=2,
+    tileGridSize=(8, 8)
+)
+contrast = clahe.apply(gray)
+
+gamma = 0.7
+look_up = np.array([
+    ((i / 255.0) ** (1 / gamma)) * 255
+    for i in np.arange(256)
+]).astype("uint8")
+
+enhanced = cv2.LUT(contrast, look_up)
+
+cv2.imwrite("preprocessed_image.jpg", enhanced)
+
+# ------------------------------------------------
+# TESSERACT CONFIGURATION (GENERALIZED)
+# ------------------------------------------------
+text = pytesseract.image_to_string(
+    enhanced,
+    config="--oem 3 --psm 6 --dpi 300",
+    lang="eng"
+)
+
+# ------------------------------------------------
+# LIGHT OUTPUT CLEANING (STRUCTURE ONLY)
+# ------------------------------------------------
+clean_text = "\n".join(
+    line.strip() for line in text.splitlines() if line.strip()
+)
+
+with open("ocr_output.txt", "w", encoding="utf-8") as f:
+    f.write(clean_text)
+
+print("OCR text saved to ocr_output.txt")
+
+# =================================================
+# AI + SYMSPELL CORRECTION
+# =================================================
+
+# ------------------------------------------------
+# SETUP SYMSPELL
+# ------------------------------------------------
+sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
+
+# Load dictionary
+dictionary_path = pkg_resources.resource_filename(
+    "symspellpy", "frequency_dictionary_en_82_765.txt"
+)
+sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
+
+# ------------------------------------------------
+# LOAD SIMPLE ENGLISH VOCABULARY FOR AI CORRECTION
+# ------------------------------------------------
+vocabulary = set()
+try:
+    with open("/usr/share/dict/words", "r", errors="ignore") as f:
+        for w in f:
+            vocabulary.add(w.strip().lower())
+except FileNotFoundError:
+    vocabulary = {
+        "the", "and", "of", "to", "in", "for", "with", "on", "this", "that",
+        "project", "system", "text", "language", "translation", "smart",
+        "glasses", "real", "time", "digital", "printed", "audio", "output",
+        "user", "camera", "design", "development", "reading", "foreign"
+    }
+
+# ------------------------------------------------
+# HYBRID CORRECTION FUNCTION
+# ------------------------------------------------
+def correct_word(word):
+    if len(word) < 3 or not word.isalpha():
+        return word
+
+    suggestion = sym_spell.lookup(word, Verbosity.CLOSEST, max_edit_distance=2)
+    if suggestion:
+        return suggestion[0].term
+
+    if word.lower() in vocabulary:
+        return word
+
+    matches = get_close_matches(word.lower(), vocabulary, n=1, cutoff=0.8)
+    if matches:
+        return matches[0].capitalize() if word[0].isupper() else matches[0]
+
+    return word
+
+# ------------------------------------------------
+# APPLY CORRECTIONS
+# ------------------------------------------------
+# ------------------------------------------------
+# APPLY OFFLINE T5 GRAMMAR CORRECTION TO OCR TEXT
+# ------------------------------------------------
+corrected_lines = []
+
+for line in clean_text.splitlines():
+    if len(line.strip()) > 3:
+        try:
+            corrected = correct_text_t5(line.strip())
+            corrected_lines.append(corrected)
+        except Exception:
+            corrected_lines.append(line.strip())  # fallback
+    else:
+        corrected_lines.append(line.strip())
+
+final_text = "\n".join(corrected_lines)
+
+
+# ------------------------------------------------
+# SAVE CORRECTED OUTPUT
+# ------------------------------------------------
+with open("ocr_op1.txt", "w", encoding="utf-8") as f:
+    f.write(final_text)
+
+print("ocr_op1.txt")

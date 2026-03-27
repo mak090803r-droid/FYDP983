@@ -1,0 +1,30 @@
+H
+Frjed Tille
+Teuk of tis prjectis-Sman Chsses Ior Real TucForeign Laurunge Reading Tnr
+Luep"
+12
+Proposnl Statement
+Tis projcct proposcs U dczign and dyclopical o[ sman Elaasr Cpabk a[ Cpturing prinied
+ud diztl ICU in forcign Lugunges end (nslating iI inlo # Wecrtkred bmgJte In rl
+uncThc Ilcm will inlcgrulc 4 lghtwcighl OmN mounled on Wearbke ghati @ squie
+Eexlual inlomulioa frm books; Instucuon manla Ebck_urd Iechnic l docunenbs
+Tu
+eptued @Xl will be pucceed using Oplicl Chandtcr Recogninon (OCRI (0 cue1 f in
+nzhine-nadablc (orat (oliowcd by AL-based tuenslution Agonthms (0 Eeocrle U? [anSt
+Llad conlen   Thc Lansluted outpul will Uicn bo delivcred audibly Uuszh built-in ipelcr
+Q
+eephonea cnahling hands-(rce II-lime meding ud comprchansion
+[unclpn  po
+typ will be daeloped und dcmonstrIcd undcr Lborztory condition l4 plldlleTe  limelau
+Opune [nnshton Eruncy dauliooulpuI
+palonana .
+13
+of Project
+Terrup ol this project includes lhe dcsiEn, impkmcntation and Icalngol uproxl-ol-ccc
+In pLses syalcm (0r Ccul-limc forcign Langusge meJing anJ transhition
+Th pjushall
+mdy inkprlion of 4 cancn module wth a ucarzhk pbsc Inna karkpnel & OCR
+Jenttn @ Eccurte IEu aincton E impkmcnlation ol Al taeed tanblim PaL
+epung multipla Languaget,
+An audio outpul subsyekzm chall b inumorkd ( &elvat
+Scope

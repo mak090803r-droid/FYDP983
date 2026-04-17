@@ -7,7 +7,7 @@ start = time.time()
 # ------------------------------------------------
 # LOAD IMAGE
 # ------------------------------------------------
-image = cv2.imread("testimg2.jpg")
+image = cv2.imread("highres1.jpeg")
 
 if image is None:
     raise ValueError("Image not found. Check file path.")

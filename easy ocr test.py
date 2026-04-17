@@ -2,7 +2,7 @@ import easyocr
 import numpy as np
 import cv2
 
-image = cv2.imread("testimg2.jpg")
+image = cv2.imread("highres1.jpeg")
 
 if image is None:
     raise ValueError("Image not found. Check file path.")
@@ -37,8 +37,8 @@ enhanced = cv2.LUT(contrast, look_up)
 cv2.imwrite("preprocessed_image.jpg", enhanced)
 
 reader = easyocr.Reader(['en'], gpu=False)  # Use CPU only
-results = reader.readtext('preprocessed_image.jpg')
-
+results = reader.readtext('preprocessed_image.jpg', detail=1, paragraph=False)
+filtered = [text for _, text, conf in results if conf > 0.5]
 # Extract text only (ignore boxes and confidence)
 lines = [text for _, text, _ in results]
 

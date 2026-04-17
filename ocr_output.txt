@@ -1,19 +1,18 @@
-H Li. Project Title
-The title of this project is "Smart Glasses for Real Time Foreign Language Reading! Trans:
-lation™
-i 12 Proposal Statement
-This project proposes the design and development of smart glasses capable af capturing printed
-j and digital text in foreign languages and translating it info a user-selected language in real
-7 ume. The system will integrate a lightweight camera mounted on wearable glasses to scquire
-iexinal information from books, instruction manuals, labels, and technical documents, The
-f captured text will be processed using Optical Character Recognition (OCR) to coavert it int
-| muchine-radabic format, followed by Al-based translation algorithms to generate the trans
-4 luted Content. The translated output will then be delivered audibly through: built-in speakers
-I or earphones, enabling hands-free real-time reading und comprehension. A functional proto=
-¢ type will be developed and demonstrated under laboratory conditions to yalldaic real-time i ‘
-13 Scope of Project i
-The scope of this project includes the design, implementation, and testing af a proof-of-concept:
-smart passes system for real-time foreign language reading and translation. The project shall
-i invalye integration of a camera module. with a wearable glasses frame, development of OCR
-i Sporithme for accurate text extraction, end implementation of Al-based translation roodels
-"| ‘epporting multiple languages. An audio output subsystem shall be incorporated to deliver
+ee
+rhe 7% : SS a Oe ee ee
+ae “we: a, > 7 + oe E i 4
+| The ttle of this project Smart Clases for Real Tiase Forsigit Ln ye oa:
+: . ‘ : os Gu aa nn pe a ra gre . i rv
+ey tee ae ih ee ae ee eee _ “= esate e #91 Bee
+14) Propeaal Staterscnt saan nnn ee os
+a ee Sr a t = F ele , + Pa j = ur Sans
+3 textual information from books, instruction, ma pra mounted an wearable: glasses to scqquire
+A capture, Cis, ne eee nee ae ied under laboratory conditions ta y hres SOUR TS
+4 13 Scape of Project. we Pes aA = ak. see Deeds. Ri
+, The ae Of Project) ia BU plies aig he
+smart lasses xystom for real-time he design, implementation, and testing of a proof-of-concept
+De ee ey oe cone gp chaaen ig
+Bh tperidem for uses fa camera module. with a wearable glasses frame, develop ‘project shall!
+. ee ee ioe oes of OCR
+Wh porting imajtipic Jangoages. “An audio; output subsyaies ‘bf Al-based translation yoodels |
+woages. An\audio output subsystem shall be incorporated to: de Pa

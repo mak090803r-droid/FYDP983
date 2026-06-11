@@ -18,7 +18,7 @@ while True:
 
     frame_count += 1
 
-    if frame_count % 15 != 0:
+    if frame_count % 30 != 0:
         continue
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)

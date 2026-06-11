@@ -7,7 +7,7 @@ start = time.time()
 # ------------------------------------------------
 # LOAD IMAGE
 # ------------------------------------------------
-image = cv2.imread("test1.png")
+image = cv2.imread("screen1.jpg")
 
 if image is None:
     raise ValueError("Image not found. Check file path.")
@@ -39,7 +39,7 @@ look_up = np.array([
 
 enhanced = cv2.LUT(contrast, look_up)
 
-cv2.imwrite("preprocessed_image.jpg", enhanced)
+cv2.imwrite("preprocessed_imageX.jpg", enhanced)
 
 # ------------------------------------------------
 # TESSERACT OCR

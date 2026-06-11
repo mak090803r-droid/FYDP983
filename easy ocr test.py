@@ -2,7 +2,7 @@ import easyocr
 import numpy as np
 import cv2
 
-image = cv2.imread("highres2.jpeg")
+image = cv2.imread("2026-06-09-170513.jpg")
 
 if image is None:
     raise ValueError("Image not found. Check file path.")

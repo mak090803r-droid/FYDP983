@@ -1,40 +1,13 @@
-Ce He a alignment between the “what” and the “why,” we're
-= ty ee at the how. The choice of how often boils down to a
-e oe tween ‘control and “release” styles of thinking and manag-
-Ee our paradigm is one of control, we assume that people have to
-tightly supervised if they're going to produce or perform well. If our
-Paradigm is one of release, our assumption is that, given the freedom,
-opportunity, and support, people will bring out the highest and best
-within them and accomplish great things,
-The way we see others in terms of control or release generally re-
-flects the way we see ourselves. If we have a control perspective, we as-
-sume we haye to exercise strict control over ourselves if we want to
-accomplish anything, If we have a release perspective, we see our pri-
-tary leadership task as creating optimal conditions for releasing inner
-Capacities. If our focus in goal|setting is on the endowment of inde-
-pendent will—gut it out, discipline ourselves, do it no matter what—
-that’s a good indication that our basic paradigm is one of control.
-Roger: | said, “Okay, how are you going to show your love?”
-“I don't know. | guess I'II/just look for opportunities.
-“How else?”
-“I'm going to invest the time.”
-“How else?” F "ve tried
-He sighed. “1 don’t know. To tell, you the truth, lim core nea
-ee and it hasn't worked. Sometimes it seems ®
-¥, the worse it gets.” ‘ Id be
-We then began to talk about some of the Casein eerie
-@pplied in his Telationship with his son. We talked be. trustworthy.
-Many 1f YOU want to build a trusting relationship. ©? Te We
-Make and keep commitments. Be loyal to those spect.
-‘lked about empathy—seek first to understand. Give Ms he wanted
-ane began to realize that, no matter how ee Jong as he
-wan 12 his son, nis efforts would never be effective fe OT nim
-with palling the relationship on the illusion that he Cone, with
-§90d intent—not on the reality that he coul
-Prieiple-centered leadership and love.
-F . instead of @
-fam enin ee situation, people choose Oa they feel they
-thoulddg. ost have an immediate sense 0
-“Increase sales
-“Red 5 i th,” “i
-operating costs rae by the end of the UA
+L1 Project Title ee
+__ The title of this project is “Smart Glasses for Real Time Foreign Language Reading/ Trans
+_ 12 Proposal Statement a7
+This project proposes the desi gn and development of smart glasses capable of capturing printe i
+and digital text in foreign languages and translating it into a user-selected language in real
+time. The system will integrate a lightweight camera mounted on wearable glasses to acquire —
+__ textual information from books, instruction manuals, labels, and technical documents. The —
+_ Captured text will be processed using Optical Character Recognition (OCR) to convert it into
+_ machine-readable format, followed by Al-based translation algorithms to generate the trans-
+lated content. The translated output will then be delivered audibly through built-in Speakers —
+OF earphones, enabling hands-free real-time reading and comprehension. A functional proto- —
+___ type will be developed and demonstrated under laboratory conditions to validate real-time t ext
+__ €apture, translation accuracy, and audio output performance, a
